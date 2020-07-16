@@ -5,5 +5,6 @@ module Types
     field :routes, [Types::RouteType], null: true
     field :slug, String, null: false
     field :gps, String, null: false
+
   end
 end

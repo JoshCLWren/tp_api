@@ -4,6 +4,7 @@ module Mutations
 
     argument :name, String, required: true
     argument :description, String, required: true
+    argument :location_id, Integer, required: false
 
     def resolve(name:, description:)
       route = Route.create!(name: name, description: description)
