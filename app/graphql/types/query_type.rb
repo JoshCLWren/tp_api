@@ -35,6 +35,15 @@ module Types
     end
 
     #route_locations
+    field :route_locations, Types::RouteLocationType, null: false
+
+    def route_locations
+      Route_Locations.all
+    end
+
+    field :route_location, Types::RouteLocationType, null: false do
+      argument :id, ID, required: true
+    end
 
   end
 end
