@@ -1,4 +1,4 @@
-
+module Api::V2
   class GraphqlController < ApplicationController
     # If accessing from outside this domain, nullify the session
     # This allows for outside API access while preventing CSRF attacks,
@@ -47,3 +47,4 @@
       render json: { errors: [{ message: e.message, backtrace: e.backtrace }], data: {} }, status: 500
     end
   end
+end
