@@ -35,10 +35,10 @@ module Types
     end
 
     #route_locations
-    field :route_locations, Types::RouteLocationType, null: false
+    field :route_locations, [Types::RouteLocationType], null: false
 
     def route_locations
-      Route_Locations.all
+      RouteLocation.all
     end
 
     field :route_location, Types::RouteLocationType, null: false do
