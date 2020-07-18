@@ -45,5 +45,9 @@ module Types
       argument :id, ID, required: true
     end
 
+    def route_location(id:)
+      RouteLocation.find(id)
+    end
+
   end
 end
