@@ -7,6 +7,7 @@ module Types
     field :update_location, mutation: Mutations::UpdateLocation
     field :create_route_location, mutation: Mutations::CreateRouteLocation
     field :delete_route_location, mutation: Mutations::DeleteRouteLocation
+    field :delete_route_location_by_Ids, mutation: Mutations::DeleteRouteLocationByIds
 
     field :create_location, mutation: Mutations::CreateLocation
     field(:create_location, {mutation: Mutations::CreateLocation})

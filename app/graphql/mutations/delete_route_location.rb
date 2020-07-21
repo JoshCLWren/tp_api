@@ -2,7 +2,7 @@ module Mutations
   class DeleteRouteLocation < BaseMutation
     graphql_name 'DeleteRouteLocation'
 
-    field :Routelocation, Types::RouteLocationType, null: true
+    field :RouteLocation, Types::RouteLocationType, null: true
 
     argument :id, ID, required: true
 
