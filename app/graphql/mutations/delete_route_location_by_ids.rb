@@ -4,8 +4,8 @@ module Mutations
 
     field :routeLocation, Types::RouteLocationType, null: true
 
-    argument :location_id, Integer, required: true
-    argument :route_id, Integer, required:true
+    argument :location_id, ID, required: true
+    argument :route_id, ID, required:true
 
     def resolve(location_id:, route_id:)
       route_location_id = RouteLocation.where(location_id: location_id, route_id: route_id).ids.first
