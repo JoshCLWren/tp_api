@@ -49,5 +49,19 @@ module Types
       RouteLocation.find(id)
     end
 
+    #route_home_locations
+    field :route_home_locations, [Types::RouteHomeLocationType], null: false
+
+    def route_home_locations
+      RouteHomeLocation.all
+    end
+
+    field :route_home_location, Types::RouteHomeLocationType, null: false do
+      argument :id, ID, required: true
+    end
+
+    def route_home_location(id:)
+      RouteHomeLocation.find(id)
+    end
   end
 end
